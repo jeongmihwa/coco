@@ -1,6 +1,46 @@
-<table border="2" >
-    <tr>
-      <td>1</td>
-      <td>HELLO, WORLD!</td>
-    </tr>
-</table>
+<head>
+    <script type="text/javascript">
+        function add_view(){
+          var test = document.test ;
+          var add_v = test.kkk[test.kkk.selectedIndex].value;
+          var add_t = test.kkk[test.kkk.selectedIndex].text;
+
+          test.view.options[test.view.options.length]=new Option(add_t, add_v);
+        }
+    </script>
+</head>
+<body>
+  <form name="test">
+  <table border="2" >
+      <tr>
+        <td>1</td>
+        <td>HELLO, WORLD!</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>
+              <select name="kkk"><option value="1">aaa</option><option value="2">bbb</option>
+              </select></td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td><input type="button" name="add" value="add" onclick="add_view()"></td>
+
+      </tr>
+      <tr>
+        <td>4</td>
+        <td> <select class="view" name="view" multiple="multiple" style="width:200px">
+
+        </select></td>
+
+      </tr>
+      <tr>
+        <td colspan="2"><img src="img/changeIcon1.png" alt=""></td>
+      </tr>
+      <tr>
+        <td colspan="2"><img src="img/changeIcon2.png" alt=""></td>
+      </tr>
+  </table>
+
+      </form>
+</body>
